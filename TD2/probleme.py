@@ -63,8 +63,8 @@ def airePolygone():
     # (Les 2 actions ci sont executees dans la procedure saisie())
     saisie(min_point=3, max_point=100)
     # Supprimer les points qui se répètent
-    for i in range(0, nb_points):
-        liste_occurences = positionPoint(A[i-1], B[i-1], indDebut=0, indFin=nb_points)
+    for i in range(0, nb_points -1):
+        liste_occurences = positionPoint(A[i], B[i], indDebut=0, indFin=nb_points)
         if len(liste_occurences) > 1:
             supPoint(i)
     # Calculer et afficher l'aire a du polygone P.
